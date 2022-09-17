@@ -13,5 +13,22 @@ namespace _12._09
 
         public int Start { get => start; set => start = value; }
         public int End { get => end; set => end = value; }
+
+        public Primka(int start, int end)
+        {
+            Start = start;
+            End = end;
+        }
+
+        public int Length() 
+        {
+            int length = this.End - this.Start;
+            return length; 
+        }
+
+        public override string ToString()
+        {
+            return "|"+start+", "+end+"|";
+        }
     }
 }

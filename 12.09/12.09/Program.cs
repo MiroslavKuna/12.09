@@ -19,9 +19,11 @@
             Console.WriteLine(b);
             Console.WriteLine(a.Merge(b) + "\n \n");
 
+            Primka p = new Primka(4, 9);
+            Console.WriteLine(p);
+            Console.WriteLine("length = " + p.Length()+ "\n \n");
 
-
-
+            Trojuhelnik t = new Trojuhelnik(5, 12, 81);
         }
 
     }
