@@ -47,9 +47,9 @@ namespace _12._09
         }
         public bool Pravouhly()
         {
-            if (Math.Pow(this.C, 2) == Math.Pow(this.A, 2) * Math.Pow(this.B, 2) ||
-                Math.Pow(this.A, 2) == Math.Pow(this.C, 2) * Math.Pow(this.B, 2) ||
-                Math.Pow(this.B, 2) == Math.Pow(this.A, 2) * Math.Pow(this.C, 2))
+            if (Math.Pow(this.C, 2) == Math.Pow(this.A, 2) + Math.Pow(this.B, 2) ||
+                Math.Pow(this.A, 2) == Math.Pow(this.C, 2) + Math.Pow(this.B, 2) ||
+                Math.Pow(this.B, 2) == Math.Pow(this.A, 2) + Math.Pow(this.C, 2))
             {
                 return true;
             }
