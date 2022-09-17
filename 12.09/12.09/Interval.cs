@@ -18,13 +18,14 @@ namespace _12._09
             Max = max;
         }
 
-        public int Max { get => max; set => max = value; }
         public int Min { get => min; set => min = value; }
+        public int Max { get => max; set => max = value; }
 
         public bool Edit(int min, int max)
         {
             if (min > max)
             {
+                Console.WriteLine("Wrongly inputed interval");
                 return false;
             }
             this.min = min;
@@ -39,28 +40,36 @@ namespace _12._09
             }
             return false;
         }
-        public static Interval? Merge(Interval a, Interval b)
+        public Interval? Merge(Interval b)
         {
-            if (a.Min > b.Min && a.Max < b.Max)
+            if (this.Min > b.Min && this.Max < b.Max)
             {
-                return a;
+                return this;
             }
-            else if (a.Min < b.Min && a.Max > b.Max)
+            else if (this.Min < b.Min && this.Max > b.Max)
             {
                 return b;
             }
-            else if (a.Max < b.Min && a.Max < b.Max || b.Max < a.Min && b.Max < a.Max)
+            else if (this.Max < b.Min && this.Max < b.Max || b.Max < this.Min && b.Max < this.Max)
             {
                 return null;
             }
             else 
             {
-                if (a.Min < b.Min) 
+                if (this.Min < b.Min)
                 {
-                    
+                    return new Interval(b.Min, this.Max);
                 }
-                
+                else 
+                {
+                    return new Interval(this.Min, b.Max);
+                }
             }
+        }
+
+        public override string ToString()
+        {
+            return "["+Min+", "+Max+"]";
         }
     }
 }
