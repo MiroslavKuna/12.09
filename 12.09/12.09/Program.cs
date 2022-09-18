@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("INTERVAL");
+            Interval badI = new Interval(6, 5);
             Interval a = new Interval(5, 6);
             Console.WriteLine(a);
             Interval b = new Interval(9, 12);
@@ -21,7 +22,10 @@
 
 
             Console.WriteLine("PRIMKA");
+            Primka badP = new Primka(7, 4);
             Primka p = new Primka(4, 9);
+            Console.WriteLine(p);
+            p.Edit(3, 10);
             Console.WriteLine(p);
             Console.WriteLine("length = " + p.Length()+ "\n \n");
 
@@ -52,7 +56,7 @@
             Console.WriteLine(chips);
             Console.WriteLine(chips.Transfer()+"kJ");
             Console.WriteLine("Percentage of your daily caloric income is "+chips.Percent("muz", 17, 187, 92) + "%");
-
+            Console.WriteLine("Percentage of your daily caloric income is " + chips.Percent("zena", 19, 164, 64) + "%");
         }
 
     }

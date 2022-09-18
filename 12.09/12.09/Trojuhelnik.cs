@@ -26,10 +26,13 @@ namespace _12._09
                 Console.WriteLine("Triangle inequality does not apply");
             }
         }
+        public int A { get => a; set => a = value; }
+        public int B { get => b; set => b = value; }
+        public int C { get => c; set => c = value; }
 
         public bool Rovnostranny() 
         {
-            if (this.A == this.B && this.B == this.C && this.C == this.A) 
+            if (A == B && B == C && C == A) 
             {
                 return true;
             }
@@ -37,9 +40,9 @@ namespace _12._09
         }
         public bool Rovnoramenny()
         {
-            if (this.A == this.B && this.B != this.C || 
-                this.B == this.C && this.B != this.A || 
-                this.C == this.A && this.A != this.B)
+            if (A == B && B != C || 
+                B == C && B != A || 
+                C == A && A != B)
             {
                 return true;
             }
@@ -47,16 +50,13 @@ namespace _12._09
         }
         public bool Pravouhly()
         {
-            if (Math.Pow(this.C, 2) == Math.Pow(this.A, 2) + Math.Pow(this.B, 2) ||
-                Math.Pow(this.A, 2) == Math.Pow(this.C, 2) + Math.Pow(this.B, 2) ||
-                Math.Pow(this.B, 2) == Math.Pow(this.A, 2) + Math.Pow(this.C, 2))
+            if (Math.Pow(C, 2) == Math.Pow(A, 2) + Math.Pow(B, 2) ||
+                Math.Pow(A, 2) == Math.Pow(C, 2) + Math.Pow(B, 2) ||
+                Math.Pow(B, 2) == Math.Pow(A, 2) + Math.Pow(C, 2))
             {
                 return true;
             }
             return false;
         }
-        public int A { get => a; set => a = value; }
-        public int B { get => b; set => b = value; }
-        public int C { get => c; set => c = value; }
     }
 }

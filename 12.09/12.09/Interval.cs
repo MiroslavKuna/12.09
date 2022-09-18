@@ -14,8 +14,16 @@ namespace _12._09
 
         public Interval(int min, int max)
         {
-            Min = min;
-            Max = max;
+            if (min <= max)
+            {
+                Min = min;
+                Max = max;
+            }
+            else
+            {
+                Console.WriteLine("The interval minimum can't be bigger than the maximum");
+            }
+
         }
 
         public int Min { get => min; set => min = value; }
@@ -28,8 +36,8 @@ namespace _12._09
                 Console.WriteLine("Wrongly inputed interval");
                 return false;
             }
-            this.min = min;
-            this.max = max;
+            Min = min;
+            Max = max;
             return true;
         }
 
@@ -42,27 +50,27 @@ namespace _12._09
         }
         public Interval? Merge(Interval b)
         {
-            if (this.Min > b.Min && this.Max < b.Max)
+            if (Min > b.Min && Max < b.Max)
             {
                 return this;
             }
-            else if (this.Min < b.Min && this.Max > b.Max)
+            else if (Min < b.Min && Max > b.Max)
             {
                 return b;
             }
-            else if (this.Max < b.Min && this.Max < b.Max || b.Max < this.Min && b.Max < this.Max)
+            else if (Max < b.Min && Max < b.Max || b.Max < Min && b.Max < Max)
             {
                 return null;
             }
             else 
             {
-                if (this.Min < b.Min)
+                if (Min < b.Min)
                 {
-                    return new Interval(b.Min, this.Max);
+                    return new Interval(b.Min, Max);
                 }
                 else 
                 {
-                    return new Interval(this.Min, b.Max);
+                    return new Interval(Min, b.Max);
                 }
             }
         }

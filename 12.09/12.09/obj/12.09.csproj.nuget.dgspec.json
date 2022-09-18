@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\miros\\source\\repos\\12.09\\12.09\\12.09\\12.09.csproj": {}
+    "D:\\Downloads\\prd\\12.09\\12.09\\12.09.csproj": {}
   },
   "projects": {
-    "C:\\Users\\miros\\source\\repos\\12.09\\12.09\\12.09\\12.09.csproj": {
+    "D:\\Downloads\\prd\\12.09\\12.09\\12.09.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\miros\\source\\repos\\12.09\\12.09\\12.09\\12.09.csproj",
+        "projectUniqueName": "D:\\Downloads\\prd\\12.09\\12.09\\12.09.csproj",
         "projectName": "12.09",
-        "projectPath": "C:\\Users\\miros\\source\\repos\\12.09\\12.09\\12.09\\12.09.csproj",
+        "projectPath": "D:\\Downloads\\prd\\12.09\\12.09\\12.09.csproj",
         "packagesPath": "C:\\Users\\miros\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\miros\\source\\repos\\12.09\\12.09\\12.09\\obj\\",
+        "outputPath": "D:\\Downloads\\prd\\12.09\\12.09\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

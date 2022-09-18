@@ -16,8 +16,22 @@ namespace _12._09
 
         public Primka(int start, int end)
         {
-            Start = start;
-            End = end;
+            if (start <= end)
+            {
+                Start = start;
+                End = end;
+            }
+            else { Console.WriteLine("Start can't be further than the end"); }
+        }
+        public void Edit(int start, int end)
+        {
+            if (start <= end)
+            {
+                Start = start;
+                End = end;
+            }
+            else { Console.WriteLine("Start can't be further than the end"); }
+
         }
 
         public int Length() 
